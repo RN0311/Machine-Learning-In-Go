@@ -1,0 +1,146 @@
+#+theme=black
+
+Machine Learning With Go
+27 October 2018
+
+Rashmi Nagpal
+Software Engineer 
+@sparkle_rash
+http://github.com/RN0311
+
+* Discussion of Machine Learning, Go Libraries, Examples
+
+- Basics of Machine Learning.
+
+- Golang in the architecture of machine learning systems.
+
+- Go Libararies.
+
+* Machine Learning
+
+Machine Learning is programming computers to optimize a performance criterion using example data or past experience.
+
+
+* Process
+
+- Data Reduction
+
+- Date Transformation 
+
+- Data Cleaning
+
+- Data Consolidation
+
+- Modelling
+
+
+
+* Life Cycle
+
+.image images/lifecycle.png 550 1000  
+
+
+* Different Techniques
+
+.image images/difftech.png 550 1000 
+
+* Why golang?
+
+.image images/gopher.jpg 500 600
+
+* Design Goals
+
+- Make managing concurrent/distributed systems easy.
+
+- Improve collaboration with developers.
+
+- Facilitate evolving codebases (refactoring etc.)
+
+- Very efficient and easy to build and deploy.
+
+* Advantages of using golang for data science
+
+- Fun to write Go Code!
+
+- Very Fast in Runtime and Compilation.
+
+- Easy Parallelism compared to other traditional languages.
+
+- Native Concurrency and Parallelism implemented.
+
+- Lots of libararies present but, still it requires heavy tuning.
+
+
+
+* Neural Networks in Go
+.image images/nn.jpg 520 950
+
+* Neural Networks in Go
+- Neural Networks written in go : https://github.com/goml/gobrain
+
+- Go Fann - https://github.com/white-pony/go-fann
+
+- Multi-Layer Perceptron Neural Network - https://github.com/schuyler/neural-go
+
+- Go Bindings for OpenCV - https://github.com/lazywei/go-opencv
+
+- Small Go package for fast high-level image processing using libvips via C bindings - https://github.com/h2non/bimg
+
+
+* Go Notebooks
+.image images/gonotebooks.png 520 950
+
+* Generic Machine Learning Libraries 
+
+- GoLearn: https://github.com/sjwhitworth/golearn: One of the most prominent Go machine Learning library. A very similar implementation as scikit-learn, mostly implemented in Go with some C++ bindings.
+
+- GoML: https://github.com/cdipaolo/gomal: Algorithms which are used for controlling data which is in flow of streams, channels.
+
+- Gorgonia: https://github.com/chewxy/gorgonia: A very similar implementation to theano, allows us to define behavior about neural networks at a high level, but easier to eploy on various interfaces.
+
+
+* Classification
+
+.image images/classification.png 550 750
+
+
+* System Architectures
+
+* Use Cases
+
+- Energy Analytics
+
+- Transactional Frauds in Banking
+
+- Network Analytics
+
+* Energy Analytics
+.image images/energy.png 420 950
+
+* Architecture Overview
+.image images/architecture.png 520 950
+
+* Architecture Overview
+.image images/marchitecture.png 520 950
+
+* Models
+.image images/models.png 520 950
+
+* Models
+.image images/models2.png 520 950
+
+* Concurrency
+- No Thread Primitives
+
+- Goroutines
+
+- Channels
+
+* Design Takeaways
+- Design decoupled enabled code.
+
+- Write resilient batching, draining and stateless code.
+
+- No tail-call optimization.
+
+- Sufficient amount of tuning is required for optimizing performance.

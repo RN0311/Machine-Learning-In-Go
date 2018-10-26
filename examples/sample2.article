@@ -1,5 +1,4 @@
 #+theme=my_theme
-#+hideLastSlide=true
 
 Using Present-Plus
 16 Sep 2015
@@ -107,8 +106,6 @@ To create a new theme, create a folder that has the theme name, and add a 'theme
         "closing-message": "Thank You!"
     }
 
-* Creating a Theme (continued)
-
 This theme folder can then be placed within a 'plus-themes' folder so that it can be used by your slides or articles (see slide #3: Using a Theme).
 
 The `slide-stylesheets`, `article-stylesheets` and `directory-stylesheets` properties are arrays that contains either urls to a stylesheet or font or the names of a stylesheet located within the theme folder. In this example, 'slide.css' is located next to the 'theme.json' file and contains css styles for slides that override the default styles found in styles.css.
@@ -116,8 +113,6 @@ The `slide-stylesheets`, `article-stylesheets` and `directory-stylesheets` prope
 The `hide-last-slide` property, if set to true, will remove the 'Thank You' slide that is automatically added to the end of the slide deck.
 
 The `closing-message` property allows you to overwrite the standard 'Thank You' message on the last slide with a different message.
-
-* Creating a Theme (continued)
 
 Any files referenced by your custom CSS files (i.e. background image) must be included in the theme folder, but do not need to be listed in the theme.json file.
 
