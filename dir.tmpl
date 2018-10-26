@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{.Title}}</title>
+    <link type="text/css" rel="stylesheet" href="/static/dir.css">
+    {{range $i, $s := .Stylesheets}}
+    <link rel="stylesheet" type="text/css" href="{{$s}}">
+    {{end}}
+    <script src="/static/dir.js"></script>
+  </head>
+  <body>
+
+  <div id="topbar">
+    <div class="container">
+      <div id="heading"><a href="/">{{.Title}}</a></div>
+    </div>
+  </div>
+
+  <div id="page">
+
+    <h1>Presentations</h1>
+
+    {{with .Path}}<h2>{{.}}</h2>{{end}}
+
+    {{with .Articles}}
+    <h4>Articles:</h4>
+    <dl>
+    {{range .}}
+    <dd>
+      {{if .ShowFileName}}
+      <a href="/{{.Path}}">{{.Name}}</a>: {{.Title}}
+      {{else}}
+      <a href="/{{.Path}}">{{.Title}}</a>
+      {{end}}
+    </dd>
+    {{end}}
+    </dl>
+    {{end}}
+
+    {{with .Slides}}
+    <h4>Slide Decks:</h4>
+    <dl>
+    {{range .}}
+    <dd>
+      {{if .ShowFileName}}
+      <a href="/{{.Path}}">{{.Name}}</a>: {{.Title}}
+      {{else}}
+      <a href="/{{.Path}}">{{.Title}}</a>
+      {{end}}
+    </dd>
+    {{end}}
+    </dl>
+    {{end}}
+
+    {{with .Other}}
+    <h4>Files:</h4>
+    <dl>
+    {{range .}}
+    <dd><a href="/{{.Path}}">{{.Name}}</a></dd>
+    {{end}}
+    </dl>
+    {{end}}
+
+    {{with .Dirs}}
+    <h4>Sub-directories:</h4>
+    <dl>
+    {{range .}}
+    <dd><a href="/{{.Path}}">{{.Name}}</a></dd>
+    {{end}}
+    </dl>
+    {{end}}
+
+  </div>
+
+  <div id="footer">
+    <div id="content">
+      The presentations on this page are served up using Present-Plus, a fork of the Go Present
+      tool released with the Golang programming language.
+    </div>
+    <div id="links">
+      <a href="http://golang.org" target="_blank">Golang Home</a> |
+      <a href="https://godoc.org/golang.org/x/tools/present" target="_blank">Go Present</a> |
+      <a href="https://github.com/davelaursen/present-plus" target="_blank">Present-Plus</a>
+    </div>
+  </div>
+
+  </body>
+</html>
